@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #17141d;
+  height: 160vh;
+
+}
+
+/* navbar stillendirme */
+
+.button-1 {
+  display: inline-flex;
+  font-size: 17px;
+  gap: 30px;
+  padding-top: 3%;
+  margin-bottom: 5%;
+  text-decoration: none;
+  background: none;
+  font-family: 'Bruno Ace SC', cursive;
+  padding: 12px 20px;
+  min-width: 160px;
+  cursor: pointer;
+  /* İmleç ile üzerinde geldiğimizde değişmnesi için */
+  position: relative;
+  transition: color 0.4s linear;
+
+
+}
+
+@media only screen and (max-width: 740px) {
+  .button-1 {
+    display: block;
+    margin-top: 20px;
+    margin-left: 40%;
+    padding-top: 20px;
+
+  }
+}
+
+
+
+
+@media only screen and (max-width: 739px) {
+  .button-1 {
+    display: block;
+    margin-top: 20px;
+    margin-left: 0%;
+    padding-top: 20px;
+
+
+  }
+}
+
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Bruno Ace SC', cursive;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* içerik */
+
+
+.ünvan {
+  color: #216ab3;
+}
+
+.tam_kapsayici {
+  padding-bottom: 10px;
+}
+
+/* fotoğrafı düzgün konumlandır yarın */
+img {
+
+  padding-bottom: 5%;
+
+}
+
+.foto {
+  text-align: center;
+  border-radius: 20%;
+
+
+}
+
+/* Kendim Hakkında Bilgi */
+.who_am_ı {
+  position: relative;
+  margin-bottom: 10%;
+  overflow: hidden;
+  /* overflow: hidden; özelliği divin içierisndeki elementin dışarıya kaçmaması için veririz */
+  color: white;
+  height: 7em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.kendim_bilgi {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+
+}
+
+.kutu {
+  width: 289px;
+  height: 400px;
+  border-radius: 30px;
+  display: inline-flex;
+
+
+}
+
+/* Buton Stillendirme */
+.btn {
+  background: none;
+  border: 2px solid #216ab3;
+  font-family: 'Bruno Ace SC', cursive;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  min-width: 160px;
+  cursor: pointer;
+  /* İmleç ile üzerinde geldiğimizde değişmnesi için */
+  position: relative;
+  transition: color 0.4s linear;
+
+}
+
+.btn:hover {
+  color: #fff;
+
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #2c3e50;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+/* 'whats on the web' yazı stil ve renk */
+.web-what {
+  color: #00DDEB;
+  font-family: 'Bruno Ace SC', cursive;
+}
+
+/* card */
+
+.card {
+  font-family: 'Bruno Ace SC', cursive;
+  --bg: #2C3E50;
+  --hover-bg: #2C3E50;
+  --hover-text: #216ab3;
+  max-width: 23ch;
+  text-align: center;
+  background: var(--bg);
+  padding: 10em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+  display: inline-flex;
+  /* Responsive olmasını sağladı ve yanlandı. Ekran küçülünce ortalandı */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.card__body {
+  color: #fff;
+  line-height: 1.5em;
+  font-size: 1em;
+
+}
+
+.card> :not(span) {
+  transition: .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.card>strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+  color: #fff;
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 10px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
+
+.card:hover>div,
+.card:hover>strong {
+  opacity: 0.1;
+}
+
+/* Tech  */
+.tech {
+  margin-top: 5%;
+  width: 100%;
+
+}
+
+.tech_write {
+  color: #00DDEB;
+  font-family: 'Bruno Ace SC', cursive;
+}
